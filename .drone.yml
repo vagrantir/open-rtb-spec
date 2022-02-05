@@ -5,8 +5,12 @@ name: default
 
 steps:
   - name: tests
-    image: php:7.4
+    image: php:7.4-cli
     commands:
+      - php -m
+      - docker-php-source extract \
+        # do important things \
+        && docker-php-source delete
       - php ./composer.phar install
       - php ./vendor/bin/phpunit.phar
 
