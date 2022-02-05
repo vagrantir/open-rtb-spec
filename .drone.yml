@@ -7,7 +7,7 @@ steps:
   - name: tests
     image: php:7.4-cli
     commands:
-      - apt-get update && apt-get install zip unzip php-zip
+      - apt-get update && apt-get install zip unzip
       - php -m
 #      - docker-php-source extract && docker-php-ext-enable memcached && docker-php-source delete
       - php ./composer.phar install
