@@ -7,6 +7,6 @@ steps:
   - name: tests
     image: php:7.4
     commands:
-      - ./composer.phar install
-      - ./vendor/bin/phpunit.phar
+      - php ./composer.phar install
+      - php ./vendor/bin/phpunit.phar
 
