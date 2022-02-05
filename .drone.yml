@@ -7,6 +7,7 @@ steps:
   - name: tests
     image: php:7.4-cli
     commands:
+      - apt install zip unzip php-zip
       - php -m
       - docker-php-source extract && docker-php-source delete
       - php ./composer.phar install
