@@ -1,0 +1,11 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+steps:
+  - name: tests
+    image: php:7.4
+    commands:
+      - ls -l
+
